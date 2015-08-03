@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "LVLocationManager.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,22 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    if ([launchOptions objectForKey:UIApplicationLaunchOptionsLocationKey])
+    {
+        if ([[LVLocationManager shareInstance] respondsToSelector:@selector(requestAlwaysAuthorization)])
+        {
+            [[LVLocationManager shareInstance] requestAlwaysAuthorization];
+        }
+        
+        /// 这是iOS9中针对后台定位退出的新属性 不设置的话，可能会出现顶部蓝条
+        if ([self respondsToSelector:@selector(allowsBackgroundLocationUpdates)])
+        {
+            [LVLocationManager shareInstance].allowsBackgroundLocationUpdates = YES;
+        }
+        [[LVLocationManager shareInstance] startUpdatingLocation];
+    }
+    
     return YES;
 }
 

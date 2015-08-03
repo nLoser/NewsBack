@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B91762C623AA772A0573A81 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB733ADAA4EFA96DDDF22DA /* libPods.a */; };
 		A927EA931B6CB2D600C8A926 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A927EA921B6CB2D600C8A926 /* main.m */; };
 		A927EA961B6CB2D600C8A926 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A927EA951B6CB2D600C8A926 /* AppDelegate.m */; };
 		A927EA991B6CB2D600C8A926 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A927EA981B6CB2D600C8A926 /* ViewController.m */; };
@@ -14,6 +15,8 @@
 		A927EA9E1B6CB2D600C8A926 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A927EA9D1B6CB2D600C8A926 /* Images.xcassets */; };
 		A927EAA11B6CB2D600C8A926 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A927EA9F1B6CB2D600C8A926 /* LaunchScreen.xib */; };
 		A927EAAD1B6CB2D600C8A926 /* NewsBackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A927EAAC1B6CB2D600C8A926 /* NewsBackTests.m */; };
+		A927EAB81B6CB84A00C8A926 /* LVLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A927EAB71B6CB84A00C8A926 /* LVLocationManager.m */; };
+		A927EABA1B6CB87400C8A926 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A927EAB91B6CB87400C8A926 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +30,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4FB733ADAA4EFA96DDDF22DA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CDE15DF2020C8531817F258 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		76FE892E62A805588B846A2F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A927EA8D1B6CB2D600C8A926 /* NewsBack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsBack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A927EA911B6CB2D600C8A926 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A927EA921B6CB2D600C8A926 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +46,9 @@
 		A927EAA61B6CB2D600C8A926 /* NewsBackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsBackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A927EAAB1B6CB2D600C8A926 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A927EAAC1B6CB2D600C8A926 /* NewsBackTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsBackTests.m; sourceTree = "<group>"; };
+		A927EAB61B6CB84A00C8A926 /* LVLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LVLocationManager.h; sourceTree = "<group>"; };
+		A927EAB71B6CB84A00C8A926 /* LVLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LVLocationManager.m; sourceTree = "<group>"; };
+		A927EAB91B6CB87400C8A926 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +56,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A927EABA1B6CB87400C8A926 /* CoreLocation.framework in Frameworks */,
+				8B91762C623AA772A0573A81 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +71,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		343A0CCF566691B6E30B043F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				76FE892E62A805588B846A2F /* Pods.debug.xcconfig */,
+				5CDE15DF2020C8531817F258 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		84A70D635B9935A400903311 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A927EAB91B6CB87400C8A926 /* CoreLocation.framework */,
+				4FB733ADAA4EFA96DDDF22DA /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A927EA841B6CB2D600C8A926 = {
 			isa = PBXGroup;
 			children = (
 				A927EA8F1B6CB2D600C8A926 /* NewsBack */,
 				A927EAA91B6CB2D600C8A926 /* NewsBackTests */,
 				A927EA8E1B6CB2D600C8A926 /* Products */,
+				343A0CCF566691B6E30B043F /* Pods */,
+				84A70D635B9935A400903311 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +112,8 @@
 		A927EA8F1B6CB2D600C8A926 /* NewsBack */ = {
 			isa = PBXGroup;
 			children = (
+				A927EAB61B6CB84A00C8A926 /* LVLocationManager.h */,
+				A927EAB71B6CB84A00C8A926 /* LVLocationManager.m */,
 				A927EA941B6CB2D600C8A926 /* AppDelegate.h */,
 				A927EA951B6CB2D600C8A926 /* AppDelegate.m */,
 				A927EA971B6CB2D600C8A926 /* ViewController.h */,
@@ -126,9 +159,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A927EAB01B6CB2D600C8A926 /* Build configuration list for PBXNativeTarget "NewsBack" */;
 			buildPhases = (
+				F09A404BC5D53C37AA7E1C47 /* Check Pods Manifest.lock */,
 				A927EA891B6CB2D600C8A926 /* Sources */,
 				A927EA8A1B6CB2D600C8A926 /* Frameworks */,
 				A927EA8B1B6CB2D600C8A926 /* Resources */,
+				709FA7DE400D3ED7B4EB500E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -168,6 +203,11 @@
 				TargetAttributes = {
 					A927EA8C1B6CB2D600C8A926 = {
 						CreatedOnToolsVersion = 6.4;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					A927EAA51B6CB2D600C8A926 = {
 						CreatedOnToolsVersion = 6.4;
@@ -214,11 +254,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		709FA7DE400D3ED7B4EB500E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F09A404BC5D53C37AA7E1C47 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A927EA891B6CB2D600C8A926 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A927EAB81B6CB84A00C8A926 /* LVLocationManager.m in Sources */,
 				A927EA991B6CB2D600C8A926 /* ViewController.m in Sources */,
 				A927EA961B6CB2D600C8A926 /* AppDelegate.m in Sources */,
 				A927EA931B6CB2D600C8A926 /* main.m in Sources */,
@@ -345,9 +419,11 @@
 		};
 		A927EAB11B6CB2D600C8A926 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76FE892E62A805588B846A2F /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NewsBack/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -355,9 +431,11 @@
 		};
 		A927EAB21B6CB2D600C8A926 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CDE15DF2020C8531817F258 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NewsBack/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -416,6 +494,7 @@
 				A927EAB21B6CB2D600C8A926 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A927EAB31B6CB2D600C8A926 /* Build configuration list for PBXNativeTarget "NewsBackTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +503,7 @@
 				A927EAB51B6CB2D600C8A926 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
